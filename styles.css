@@ -1,0 +1,47 @@
+.flex{
+    justify-content: center;
+    display:flex;
+    align-items: stretch;
+}
+.flex-container{
+    text-align: center;
+}
+.center{
+    display: flex;
+    margin:0 auto;
+    justify-content: center;
+
+}
+table{
+    border-collapse: collapse;
+}
+table,td,th{
+    border: 1px solid black;
+}
+label{
+    float: left;
+}
+h3{
+    text-align:left;
+}
+.para{
+   width:60%;
+   display: flex;
+   margin:0 auto;
+   justify-content: left;
+}
+table{
+    width:60%;
+}
+th{
+    height: 30px;
+}
+td{
+    height: 30px;
+}
+.off{
+    width:50%;
+}
+caption{
+    text-align: left;
+}

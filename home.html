@@ -1,0 +1,251 @@
+<html>
+    <head>
+        <title>
+            Registration form
+        </title>
+        <style>
+            .flex{
+                justify-content: center;
+                display:flex;
+                align-items: stretch;
+            }
+            .flex-container{
+                text-align: center;
+            }
+            input[type=text]{
+                border:2px solid grey;
+            } 
+            input[type=email]{
+                border:2px solid grey;
+            }
+            input[type=number]{
+                border:2px solid grey;
+             }
+            select{
+                border:2px solid grey;
+                width:100%;
+            }
+            input[type=submit]{
+                border-radius:10px;
+                outline: none;
+                font-size: 20px;
+            }  
+            input[type=reset]{
+                border-radius: 10px;
+                outline:none;
+                font-size: 20px;
+            }        
+            .center{
+                display: flex;
+                margin:0 auto;
+                justify-content: center;
+            }
+
+            h3{
+                text-align:center;
+            }
+        </style>
+
+        <script type="text/javascript" src="validation.js"></script>
+    </head>
+    <body background="">
+        <div class="flex">
+            <div class="flex-container">
+                <img src="src\kec1.jpeg"/>
+            </div>
+
+            <div class="flex-container">
+                <h2>KONGU ENGINEERING COLLEGE, PERUNDURAI, ERODE-638060</h2>
+                <h2>(Autonomous)</h2>
+                <h2>DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</h2>
+
+            </div>
+
+            <div class="flex-container">
+                <img src="src\kec2.jpeg"/>
+            </div>
+        </div>
+        <div class=center>
+            <h2>Wi-Fi Connectivity-Registration Form</h2>
+        </div>
+        <div class="center">
+            
+            <form name="info" onsubmit="window.print()" action="data.php" method="POST">
+                <table cellspacing="10"> 
+                    <tbody>
+                        <tr>
+                            <td colspan="2">
+                                <h3>GENERAL INFORMATION</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>ROLLNO:</label>
+                            </th>
+                            <td>
+                                <input type="text" name="rollno" required/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>NAME:</label>
+                            </th>
+                            <td>
+                                <input type="text" name="name" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>GENDER</label>
+                            </th>
+                            <td>
+                                <input type="radio" name="gender" value="Female"/>Female
+                                <input type="radio" name="gender" value="Male" required/>Male
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>COURSE:</label>
+                            </th>
+                            <td>
+                                <select id="course" name="course" onclick="branchselect()">
+                                    <option>B.E</option>
+                                    <option>B.Tech</option>
+                                    <option>B.Arch</option>
+                                    <option>B.Sc</option>
+                                    <option>M.Sc</option>
+                                    <option>MBA</option>
+                                    <option>MCA</option>
+                                    <option>M.E</option>
+                                    <option>M.Tech</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>BRANCH:</label>
+                            </th>
+                            <td>
+                                <select id="branch" name="branch">
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>COURSE DURATION:</label>
+                            </th>
+                            <td>
+                                <input type="number" name="from" min="2015" max="2030" required/>
+                                <label> to </label>
+                                <input type="number" name="to" min="2017" max="2035" required/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>HOSTEL:</label>
+                            </th>
+                            <td>
+                                <input type="text" name="hostel"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>ROOM NO:</label>
+                            </th>
+                            <td>
+                                <input type="text" name="roomno" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>E-MAIL ID:</label>
+                            </th>
+                            <td>
+                                <input type="email" name="mail" required/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <h3>TECHNICAL INFORMATION</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>TYPE OF DEVICE:</label>
+                            </th><td>
+                                <input type="radio" name="device" value="Tablet" required/>Tablet
+                            </td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td>
+                                <input type="radio" name="device" value="Laptop"/>Laptop
+                            </td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td>
+                                <input type="radio" name="device" value="Smartphone"/>Smartphone
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>MAKE:</label>
+                            </th>
+                            <td>
+                                <input type="text" name="make" required/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>MODEL:</label>
+                            </th>
+                            <td>
+                                <input type="text" name="model" required/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>SERIAL NO:</label>
+                            </th>
+                            <td>
+                                <input type="text" name="serialno" required/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>MAC ADDRESS:</label>
+                            </th>
+                            <td>
+                                <input type="text" name="mac" required/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <lable>OS & VERSION</lable>
+                            </th>
+                            <td>
+                                <input type="text" name="os" required/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label>ANTIVIRUS INSTALLED:</label>
+                            </th>
+                            <td>
+                                <input type="text" name="antiv" required/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td>
+                                <input type="submit" name="submit">
+                                <input type="reset" name="reset">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
